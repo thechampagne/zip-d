@@ -1,0 +1,5 @@
+name "zip"
+description "Binding for a portable, simple zip library"
+authors "XXIV"
+copyright "Copyright © 2023, XXIV"
+license "MIT"
