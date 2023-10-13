@@ -1,0 +1,14 @@
+.dub
+docs.json
+__dummy.html
+/zip
+zip.so
+zip.dylib
+zip.dll
+zip.a
+zip.lib
+zip-test-*
+*.exe
+*.o
+*.obj
+*.lst
