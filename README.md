@@ -11,6 +11,23 @@ D binding for a portable, simple **zip** library.
 dub add zip
 ```
 
+### Example
+```d
+import zip;
+
+void main()
+{
+  zip_t* zip = zip_open("/tmp/d.zip", 6, 'w');
+  scope(exit) zip_close(zip);
+
+  zip_entry_open(zip, "test");
+  scope(exit) zip_entry_close(zip);
+
+  string content = "test content";
+  zip_entry_write(zip, content.ptr, content.length);
+}
+```
+
 ### References
  - [zip](https://github.com/kuba--/zip)
 
