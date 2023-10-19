@@ -17,14 +17,14 @@ import zip;
 
 void main()
 {
-  zip_t* zip = zip_open("/tmp/d.zip", 6, 'w');
-  scope(exit) zip_close(zip);
+  zip_t* z = zip_open("/tmp/d.zip", 6, 'w');
+  scope(exit) zip_close(z);
 
-  zip_entry_open(zip, "test");
-  scope(exit) zip_entry_close(zip);
+  zip_entry_open(z, "test");
+  scope(exit) zip_entry_close(z);
 
   string content = "test content";
-  zip_entry_write(zip, content.ptr, content.length);
+  zip_entry_write(z, content.ptr, content.length);
 }
 ```
 
